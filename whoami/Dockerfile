@@ -1,0 +1,1 @@
+FROM containous/whoami

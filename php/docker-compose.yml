@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  apache:
+    container_name: php_apache
+    build:  
+      context: ./
+    ports: 
+      - "4000:80"
+
+networks:
+  default:
+    external:
+      name: nginx-network
+
+      
+#docker-compose down -v && docker-compose up --build -d

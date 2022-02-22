@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  whoami:
+    container_name: whoami
+    build:  
+      context: ./whoami
+      dockerfile: Dockerfile
+    ports: 
+      - "3000:80"
+
+  apache:
+    container_name: php_apache
+    build:  
+      context: ./php
+      dockerfile: Dockerfile
+    ports: 
+      - "4000:80"
+
+  dotnet:
+    container_name: dotnet_weather
+    build:  
+      context: ./dotnet
+      dockerfile: Dockerfile
+    ports: 
+      - "5000:80"
+  
+  proxy:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports: 
+      - "80:80"  
+      
+networks:
+  default:
+    external:
+      name: nginx-network
+#docker-compose down -v && docker-compose up --build -d

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OTTKFxoL7NOZR8vU9y0373XxhLmao+jGFlb+WPoqp3o=",
+  "Source": "dotnet-webapi-test",
+  "BasePath": "_content/dotnet-webapi-test",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

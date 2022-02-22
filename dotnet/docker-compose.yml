@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  weather:
+    container_name: dotnet-weather
+    build:  
+      context: ./
+    ports: 
+      - "6000:80"
+
+networks:
+  default:
+    external:
+      name: nginx-network
+
+      
+#docker-compose down -v && docker-compose up --build -d
